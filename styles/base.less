@@ -153,7 +153,7 @@ atom-text-editor[mini] .scroll-view {
   }
 }
 
-// CSS, SASS, SCSS, LESS untested
+// HTML, PUG, JADE, SCSS, CSS, LESS
 .syntax--html, .syntax--pug, .syntax--jade, .syntax--scss, .syntax--sass, .syntax--css, .syntax--less{
   &.syntax--tag, &.syntax--entity.syntax--name.syntax--tag {
     color: @sky;
@@ -162,7 +162,7 @@ atom-text-editor[mini] .scroll-view {
     color: @evergreen;
   }
   &.syntax--constant {
-    color: @brushfire;
+    color: @dandelion;
   }
   &.syntax--meta.syntax--toc-list.syntax--id {
     color: @evergreen;
@@ -175,5 +175,20 @@ atom-text-editor[mini] .scroll-view {
   }
   &.syntax--entity.syntax--other.syntax--attribute-name{
      color: @dandelion;
+  }
+  .syntax--meta.syntax--scope {
+    color: @wood;
+  }
+}
+
+// Markdown
+.syntax--markup {
+  &.syntax--italic {
+    color: @dandelion;
+    font-style: italic;
+  }
+  &.syntax--bold{
+    color: @sky;
+    font-weight: bold;
   }
 }
