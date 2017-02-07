@@ -1,0 +1,173 @@
+@import "syntax-variables";
+
+atom-text-editor {
+  background-color: @syntax-background-color;
+  color: @cloud; //@syntax-text-color;
+
+  .wrap-guide {
+    background-color: @syntax-wrap-guide-color;
+  }
+
+  .indent-guide {
+    color: @syntax-indent-guide-color;
+  }
+
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
+
+  .gutter {
+    background-color: @syntax-gutter-background-color;
+    color: @syntax-gutter-text-color;
+
+    .line-number {
+      &.cursor-line {
+        background-color: @syntax-gutter-background-color-selected;
+        color: @syntax-gutter-text-color-selected;
+      }
+
+      &.cursor-line-no-selection {
+        color: @syntax-gutter-text-color-selected;
+      }
+    }
+  }
+
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after {
+    color: @light-gray;
+  }
+
+  .invisible {
+    color: @cloud; //@syntax-text-color;
+  }
+
+  .cursor {
+    color: @syntax-cursor-color;
+  }
+
+  .selection .region {
+    background-color: @syntax-selection-color;
+  }
+}
+
+atom-text-editor .search-results .syntax--marker .region {
+  background-color: transparent;
+  border: 1px solid @syntax-result-marker-color;
+}
+
+atom-text-editor .search-results .syntax--marker.current-result .region {
+  border: 1px solid @syntax-result-marker-color-selected;
+}
+
+// Syntax styles
+atom-text-editor[mini] .scroll-view {
+  padding-left: 1px;
+}
+
+.syntax--constant {
+  color: @dandelion;
+  &.syntax--other {
+    color: @evergreen;
+  }
+}
+.syntax--string {
+  color: @dandelion;
+}
+.syntax--storage {
+  color: @wood;
+}
+.syntax--function {
+  color: @fawn;
+}
+.syntax--entity {
+  &.syntax--name.syntax--tag {
+    color: @brushfire;
+  }
+  &.syntax--other, &.syntax--variable.syntax--other.syntax--module {
+    color: @fox;
+  }
+}
+.syntax--keyword {
+  color: @sky;
+  &.syntax--operator.syntax--assignment {
+    color: @cloud;
+  }
+}
+
+.syntax--meta {
+  color: @cloud;
+}
+.syntax--variable {
+  color: @cloud;
+  &.syntax--language {
+    color: @sky;
+  }
+}
+.syntax--punctuation.syntax--embedded {
+  color: @evergreen;
+}
+
+.syntax--source.syntax--embedded{
+  color: @cloud;
+}
+.syntax--meta.syntax--delimiter{
+  color: @cloud;
+}
+.syntax--punctuation {
+  &.syntax--definition {
+    color: @cloud;
+  }
+}
+.syntax--punctuation.syntax--definition.syntax--comment,
+.syntax--comment {
+  color: @shadow;
+}
+
+// SPECIAL
+.syntax--storage.syntax--type.syntax--class {
+  &.syntax--todo, &.syntax--fixme{
+    padding: 1px 3px;
+    background: @signalflare;
+    color: white;
+    border-radius: 3px;
+  }
+  &.syntax--todo{
+    opacity: 0.7;
+  }
+}
+
+// JSON
+.syntax--json {
+  .syntax--meta.syntax--structure.syntax--dictionary:not(.syntax--value) > .syntax--string.syntax--quoted.syntax--double {
+    color: @wood;
+  }
+  &.syntax--meta.syntax--structure.syntax--dictionary .syntax--string.syntax--quoted.syntax--double {
+      color: @dandelion;
+  }
+}
+
+// CSS, SASS, SCSS, LESS untested
+.syntax--html, .syntax--pug, .syntax--jade, .syntax--scss, .syntax--sass, .syntax--css, .syntax--less{
+  &.syntax--tag, &.syntax--entity.syntax--name.syntax--tag {
+    color: @sky;
+  }
+  &.syntax--string {
+    color: @evergreen;
+  }
+  &.syntax--constant {
+    color: @brushfire;
+  }
+  &.syntax--meta.syntax--toc-list.syntax--id {
+    color: @evergreen;
+  }
+  &.syntax--tag.syntax--punctuation, &.syntax--punctuation.syntax--definition.syntax--tag {
+    color: @wood;
+  }
+  &.syntax--doctype {
+    color: @brushfire;
+  }
+  &.syntax--entity.syntax--other.syntax--attribute-name{
+     color: @dandelion;
+  }
+}
