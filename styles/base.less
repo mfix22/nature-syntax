@@ -81,12 +81,17 @@ atom-text-editor[mini] .scroll-view {
   color: @fawn;
 }
 .syntax--entity {
+  // JSX tags
   &.syntax--name.syntax--tag {
     color: @brushfire;
   }
   &.syntax--other, &.syntax--variable.syntax--other.syntax--module {
     color: @fox;
   }
+}
+// Module names
+&.syntax--support.syntax--class {
+  color: @fox;
 }
 .syntax--keyword {
   color: @sky;
@@ -97,6 +102,9 @@ atom-text-editor[mini] .scroll-view {
 
 .syntax--meta {
   color: @cloud;
+  &.syntax--delimiter{
+    color: @cloud;
+  }
 }
 .syntax--variable {
   color: @cloud;
@@ -104,22 +112,20 @@ atom-text-editor[mini] .scroll-view {
     color: @sky;
   }
 }
-.syntax--punctuation.syntax--embedded {
-  color: @evergreen;
+.syntax--punctuation {
+  &.syntax--embedded {
+    color: @evergreen;
+  }
+  &.syntax--definition {
+    color: @cloud;
+    &.syntax--comment {
+      color: @shadow;
+    }
+  }
 }
-
 .syntax--source.syntax--embedded{
   color: @cloud;
 }
-.syntax--meta.syntax--delimiter{
-  color: @cloud;
-}
-.syntax--punctuation {
-  &.syntax--definition {
-    color: @cloud;
-  }
-}
-.syntax--punctuation.syntax--definition.syntax--comment,
 .syntax--comment {
   color: @shadow;
 }
