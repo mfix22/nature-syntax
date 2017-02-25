@@ -1,7 +1,7 @@
 {
   "name": "nature-syntax",
   "theme": "syntax",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "A nature inspired theme, built with JavaScript and React in mind.",
   "keywords": [
     "syntax",
